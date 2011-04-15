@@ -1,0 +1,46 @@
+program Project1;
+
+uses
+  Forms,
+  Unit1 in 'Unit1.pas' {MainForm},
+  Unit2 in 'Unit2.pas' {AuthForm},
+  Unit3 in 'Unit3.pas' {UserDetailForm},
+  Unit4 in 'Unit4.pas' {NewMembersForm},
+  Unit5 in 'Unit5.pas' {SingleSubscriptionForm},
+  Unit6 in 'Unit6.pas' {NewProductForm},
+  Unit7 in 'Unit7.pas' {FlowsForm},
+  Unit8 in 'Unit8.pas' {EmployeeForm},
+  Unit9 in 'Unit9.pas' {BarCategoryAdd},
+  Unit10 in 'Unit10.pas' {BarCategoryEdit},
+  Unit11 in 'Unit11.pas' {BarCategoryDelete},
+  Unit12 in 'Unit12.pas' {HallCategoryAdd},
+  Unit13 in 'Unit13.pas' {HallCategoryEdit},
+  Unit14 in 'Unit14.pas' {HallCategoryDelete},
+  Unit15 in 'Unit15.pas' {Developers},
+  Unit16 in 'Unit16.pas' {abonement_types},
+  Unit17 in 'Unit17.pas' {user_add};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.Title := 'Зал';
+  Application.CreateForm(TMainForm, MainForm);
+  Application.CreateForm(TAuthForm, AuthForm);
+  Application.CreateForm(TUserDetailForm, UserDetailForm);
+  Application.CreateForm(TNewMembersForm, NewMembersForm);
+  Application.CreateForm(TSingleSubscriptionForm, SingleSubscriptionForm);
+  Application.CreateForm(TNewProductForm, NewProductForm);
+  Application.CreateForm(TFlowsForm, FlowsForm);
+  Application.CreateForm(TEmployeeForm, EmployeeForm);
+  Application.CreateForm(TBarCategoryAdd, BarCategoryAdd);
+  Application.CreateForm(TBarCategoryEdit, BarCategoryEdit);
+  Application.CreateForm(TBarCategoryDelete, BarCategoryDelete);
+  Application.CreateForm(THallCategoryAdd, HallCategoryAdd);
+  Application.CreateForm(THallCategoryEdit, HallCategoryEdit);
+  Application.CreateForm(THallCategoryDelete, HallCategoryDelete);
+  Application.CreateForm(TDevelopers, Developers);
+  Application.CreateForm(Tabonement_types, abonement_types);
+  Application.CreateForm(Tuser_add, user_add);
+  Application.Run;
+end.

@@ -1,0 +1,56 @@
+unit Unit16;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, ExtCtrls, DBCtrls, Grids, DBGrids;
+
+type
+  Tabonement_types = class(TForm)
+    Button1: TButton;
+    Button2: TButton;
+    Button3: TButton;
+    Button4: TButton;
+    GroupBox1: TGroupBox;
+    DBGrid1: TDBGrid;
+    procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
+    procedure Button4Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  abonement_types: Tabonement_types;
+
+implementation
+
+uses Unit1;
+
+{$R *.dfm}
+
+procedure Tabonement_types.Button1Click(Sender: TObject);
+begin
+Close;
+end;
+
+procedure Tabonement_types.Button2Click(Sender: TObject);
+begin
+DBGrid1.DataSource.DataSet.Append;
+end;
+
+procedure Tabonement_types.Button3Click(Sender: TObject);
+begin
+DBGrid1.DataSource.DataSet.Edit;
+end;
+
+procedure Tabonement_types.Button4Click(Sender: TObject);
+begin
+DBGrid1.DataSource.DataSet.Delete;
+end;
+
+end.
